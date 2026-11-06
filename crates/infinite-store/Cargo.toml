@@ -1,0 +1,23 @@
+[package]
+name = "infinite-store"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Bounded binary journal and checkpoint core for Infinite Engine"
+publish = false
+
+[dependencies]
+sha2 = "=0.10.9"
+
+[dev-dependencies]
+infinite-core = { path = "../infinite-core" }
+
+[features]
+fault-injection = []
+
+[[bin]]
+name = "store-crash-worker"
+path = "tools/crash_worker.rs"
+required-features = ["fault-injection"]

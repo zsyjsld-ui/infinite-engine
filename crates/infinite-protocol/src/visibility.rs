@@ -1,0 +1,3 @@
+use infinite_core::EntityId;
+pub fn welcome(stream:u64,owner:EntityId)->[u8;24]{let mut b=[0;24];b[..8].copy_from_slice(b"NM02\x84\0\0\0");b[8..16].copy_from_slice(&stream.to_le_bytes());b[16..20].copy_from_slice(&owner.index.to_le_bytes());b[20..24].copy_from_slice(&owner.generation.to_le_bytes());b}
+pub fn decode_welcome(b:&[u8])->Result<(u64,EntityId),&'static str>{if b.len()!=24||&b[..8]!=b"NM02\x84\0\0\0"{return Err("visibility welcome");}let stream=u64::from_le_bytes(b[8..16].try_into().unwrap());if stream==0{return Err("visibility stream");}Ok((stream,EntityId{index:u32::from_le_bytes(b[16..20].try_into().unwrap()),generation:u32::from_le_bytes(b[20..24].try_into().unwrap())}))}

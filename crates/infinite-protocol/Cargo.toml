@@ -1,0 +1,11 @@
+[package]
+name = "infinite-protocol"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+infinite-core = { path = "../infinite-core" }
+infinite-runtime = { path = "../infinite-runtime" }
+sha2 = "=0.10.9"

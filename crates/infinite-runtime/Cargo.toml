@@ -1,0 +1,12 @@
+[package]
+name = "infinite-runtime"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Bounded authoritative movement runtime using the Rust world directly"
+publish = false
+
+[dependencies]
+infinite-core = { path = "../infinite-core" }

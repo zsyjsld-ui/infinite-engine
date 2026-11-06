@@ -1,0 +1,9 @@
+{
+  "name": "infinite-engine",
+  "displayName": "无限引擎",
+  "englishName": "Infinite Engine",
+  "description": "复古2.5D联网游戏与客户端框架",
+  "version": "0.2.0-dev.1",
+  "license": "MIT",
+  "repository": "https://github.com/zsyjsld-ui/infinite-engine"
+}

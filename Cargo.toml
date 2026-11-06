@@ -1,0 +1,12 @@
+[workspace]
+members = ["crates/infinite-core", "crates/infinite-store", "crates/infinite-runtime", "crates/infinite-protocol", "crates/infinite-server"]
+resolver = "3"
+
+[workspace.package]
+version = "0.2.0-dev.1"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+repository = "https://github.com/zsyjsld-ui/infinite-engine"
+
+# Keep the workspace version aligned with engine-version.json.

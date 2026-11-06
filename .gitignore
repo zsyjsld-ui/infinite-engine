@@ -1,0 +1,10 @@
+/target/
+/.local/
+/.tools/
+/.cargo-home/
+/.rustup-home/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
